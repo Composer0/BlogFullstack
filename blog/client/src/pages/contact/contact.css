@@ -1,0 +1,73 @@
+.contact {
+    margin-top: 4rem;
+    color: #b5c99a;
+}
+
+.contact, .contact-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;    
+}
+
+form h1 {
+    margin: 0;
+    text-align: center;
+}
+  
+.contactLabel {
+    color: #66bfbf;
+    display: block;
+    margin: 3rem 0 0 0;
+    font-family: 'Lora', serif;
+}
+  
+.inputStyle {
+    font-family: 'Varela Round', sans-serif;
+    font-size: 14px;
+    text-align: center;
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    outline: none;
+    resize: none;
+    /* removes the ability for the textarea box to be. */
+    border: none;
+    /* border none creates a more stylistic approach. */
+    border-bottom: 1px solid #d3d3d3;
+    /* border-bottom styling must come after border: none in order to counter aspects of the previous input. */
+    border-radius: 10px;
+    width: 50vw;
+}
+  
+input[type="text"]:focus,
+  textarea:focus {
+    border-bottom: 1px solid rgba(255, 0, 106);
+}
+  
+textarea::-webkit-scrollbar {
+    width: 4px;
+}
+  
+textarea::-webkit-scrollbar-thumb {
+    background-color: rgb(255, 0, 106);
+    border-radius: 20%;
+}
+  
+form .center {
+    text-align: center;
+}
+
+.contactButton {
+    margin-top: 4rem;
+    cursor:pointer;
+    background-color: #93b6b6;
+    border: none;
+    color: white;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.contactButton:hover {
+    background-color: #46bbbb;
+}
