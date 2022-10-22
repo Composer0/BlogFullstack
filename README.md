@@ -1,2 +1,4 @@
-# BlogFullstack
-Bringing the Front and Back together. One step at a time!
+# Blog: Fullstack - Combining Frontend with Server API
+
+## Day 1
+Bringing the Front and Back ends together. One step at a time!
