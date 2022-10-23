@@ -2,6 +2,7 @@ import { useState, useEffect } from "react"
 import { useLocation } from "react-router"
 import './singlePost.css'
 import axios from "axios"
+import {Link} from "react-router-dom"
 
 export default function SinglePost() {
   const location = useLocation()
@@ -21,7 +22,7 @@ export default function SinglePost() {
       <div className="singlePostWrapper">
         {post.photo && 
         <img 
-        src="https://wallpaperaccess.com/full/5287561.jpg" 
+        src={post.photo}
         alt=""
         className="singlePostImg"
         />
@@ -34,7 +35,12 @@ export default function SinglePost() {
             </div>
         </h1>
         <div className="singlePostInfo">
-            <span className="singlePostAuthor">Author: <b>{post.username}</b></span>
+            <span>
+            Author:
+            <Link to={`/?username=${post.username}`} className="singlePostAuthor" >
+                <b>{post.username}</b>
+            </Link>
+            </span>
             <span className="singlePostDate">{new Date(post.createdAt).toDateString()}</span>
         </div>
         <p className="singlePostDescription">

@@ -5,11 +5,11 @@ export default function Post({post}) {
   return (
     <div className="post">
     <Link className="post" to={`/post/${post._id}`}>
-    {post.photo || (
+    {post.photo && (
       <img 
       className="postImg"
-      src="https://wallpapercave.com/wp/wp3720374.jpg"
-      // src={post.photo}
+      // src="https://wallpapercave.com/wp/wp3720374.jpg"
+      src={post.photo}
       alt="post img"
       />
     )}
@@ -18,7 +18,9 @@ export default function Post({post}) {
         <div className="postCategories">{
 
           post.categories.map(c=>(
-            <span className="postCategory">{[post.categories]}</span>
+            <Link className="postCategory" to={`/?categories=${post.categories}`}>
+              <span className="postCategory">{[post.categories]}</span>
+            </Link>
           ))
         }
         </div>
@@ -27,7 +29,12 @@ export default function Post({post}) {
             </span>
         </Link>
             <hr/>
-            <span className="postDate">{new Date(post.createdAt).toDateString()}</span>
+            <div className="createdByWhen">
+            <Link className="createdBy" to={`/?username=${post.username}`}>
+              <span>{post.username}</span>
+            </Link>
+              <span className="createdWhen">{new Date(post.createdAt).toDateString()}</span>
+            </div>
       </div>
       <Link className="postDescription" to={`/post/${post._id}`}>
         <p className="postDescription">

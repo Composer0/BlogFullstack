@@ -38,6 +38,7 @@ input:focus, textarea:focus {
     color: #66bfbf;
     cursor: pointer;
     margin-right: 10px;
+    transition: 0.4s;
 }
 
 .writeIcon:hover {
@@ -80,6 +81,7 @@ input:focus, textarea:focus {
     border-radius: 10px;
     cursor: pointer;
     font-size: 16px;
+    transition: 0.4s;
 }
 
 .writeSubmit:hover {

@@ -56,9 +56,12 @@
     width: 50%;
     margin-top: 15px;
     cursor: pointer;
+    transition: 0.4s;
+    text-decoration: none;
+    color: #66bfbf;
 }
 .sidebarListItem:hover {
-    color:rgb(144, 218, 218);
+    color:#b5c99a;
 }
 
 .sidebarSocial {
@@ -75,8 +78,9 @@
     cursor: pointer;
     color: #444;
     color: #93b6b6;
+    transition: 0.4s;
 }
 
 .sidebarIcon:hover {
-    color: #afc9c9;
+    color: #b5c99a;
 }

@@ -65,3 +65,15 @@
     font-size: 30px;
     font-weight: 600;
 }
+
+.singlePostAuthor {
+    cursor: pointer;
+    text-decoration: none;
+    color: #66bfbf;
+    margin-left: 5px;
+    transition: 0.4s;
+}
+
+.singlePostAuthor:hover {
+    color: #b5c99a;
+}

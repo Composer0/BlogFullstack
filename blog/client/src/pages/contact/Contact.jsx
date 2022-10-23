@@ -21,7 +21,7 @@ export default function Contact() {
                 <input type="hidden" name="_next" value="https://www.orionpalmer.com" />
     
                 <label className="contactLabel" htmlFor="message">Message</label>
-                <textarea className="inputStyle" name="message" placeholder="Your message" rows="6" required></textarea>
+                <textarea className="inputStyle" name="message" placeholder="Your Message" rows="6" required></textarea>
                 <small className="error"></small>
     
                 <div className="center">

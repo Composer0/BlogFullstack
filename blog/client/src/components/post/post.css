@@ -1,7 +1,7 @@
 .post{
     width: 385px;
     margin: 0px 25px 40px 25px;
-    box-shadow: rgba(116, 230, 211, 0.1) 0px 1px 0px;
+    box-shadow: rgba(140, 221, 208, 0.1) 0px 1px 0px;
 }
 
 .postImg{
@@ -25,6 +25,12 @@
     margin-top: 15px;
     margin-right: 10px;
     cursor: pointer;
+    text-decoration: none;
+    transition: 0.4s;
+}
+
+.postCategory:hover {
+    color: #b5c99a;
 }
 
 .postTitle {
@@ -36,14 +42,36 @@
     color: #b5c99a;
     text-decoration: none;
 }
+.createdByWhen {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
 
-.postDate {
+.createdBy, .createdWhen {
     font-family: "Lora", serif;
     font-style: italic;
     font-size: 13px;
     color: #93b6b6;
     margin: 7px 0 8px;
 }
+
+.createdBy {
+    position: relative;
+    right: 6rem;
+    text-decoration: none;
+    transition: 0.4s;
+}
+
+.createdBy:hover {
+    color: #b5c99a;
+}
+
+.createdWhen {
+    position: relative;
+    left: 6rem;
+}
+
 
 hr {
     display: none;

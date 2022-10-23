@@ -69,7 +69,7 @@ router.get("/:id", async (req, res) => {
 
 //GET ALL POSTS
 router.get("/", async (req, res) => { //Pathing will be ?user= based on whether we end up looking for a post by username or category.
-    const username = req.query.user;
+    const username = req.query.username;
     const catName = req.query.categories;
     try{
         let posts;
