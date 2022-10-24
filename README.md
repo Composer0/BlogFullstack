@@ -11,7 +11,7 @@
 - Used Axios to get posts of the same category and display them by creating a query for the attribute of categories.
 - Used Axios to get posts create by the same user and display them by creating a query for the attribute of username.
 
-### Lesson Learned
+### Lessons Learned
 - You will wait for a long time for information if you forget to include 'await' in your try/catch statement.
 - json tokens will not allow you to render multiple paragraphs or bullet points. I will need to find a work around for this, otherwise users will only be able to create a massive paragraph of text for each particular subject they wish to blog about.
 - I now have a better understanding of how to create pathing for Links within a React application, especially when the directories are being built through props from json objects.
