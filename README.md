@@ -19,3 +19,6 @@
 ## Day 4 & 5
 - Working on finding solution to error in Register page that cause connection to hang if a duplicate username or email is used when creating a new user. Still working on finding the solution for this.
 - Incorporating Context API to make the share and use of User id accross the application more seamless so that I won't have to worry about creating and passing props for each of the pages when a user is logged in.
+
+## Day 6
+- Created Admin model and route.
