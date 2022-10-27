@@ -4,6 +4,7 @@ const dotenv = require("dotenv");
 const mongoose = require('mongoose');
 const authRoute = require("./routes/auth");
 const usersRoute = require("./routes/users");
+const adminRoute = require("./routes/admin");
 const postsRoute = require("./routes/posts");
 const categoriesRoute = require("./routes/categories");
 const multer = require("multer");
@@ -32,6 +33,7 @@ app.post("/api/upload", upload.single("file"), (req, res)=>{
 
 app.use("/api/auth", authRoute);
 app.use("/api/users", usersRoute);
+app.use("/api/admin", adminRoute);
 app.use("/api/posts", postsRoute);
 app.use("/api/categories", categoriesRoute);
 
