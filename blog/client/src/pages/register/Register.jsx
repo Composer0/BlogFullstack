@@ -7,19 +7,23 @@ export default function Register() {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [email, setEmail] = useState("");
-  const [error, setError] = useState(false);
+  const [error, setError] = useState("");
 
   const handleSubmit = async (e)=>{
-    setError(false);
     e.preventDefault();
+    setError(false);
+    // if (const res = await axios.get("/api/register", {username})
+    // }
     try{
       const res = await axios.post("/auth/register", {
         username, 
         email, 
-        password
+        password,
       });
       res.data && window.location.replace("/login");
-    } catch(err){
+      console.log("new user!");
+    } catch (err) {
+      console.log("duplicate user");
       setError(true);
     }
   }
@@ -33,28 +37,37 @@ export default function Register() {
           type="text" 
           className="registerInput" 
           placeholder="Enter your username..." 
-          onChange={e=>setUsername(e.target.value)}
+          autoComplete="off"
+          onChange={(e)=>setUsername(e.target.value)}
         />
         <label>Email</label>
         <input 
           type="text" 
           className="registerInput" 
           placeholder="Enter your email..." 
-          onChange={e=>setEmail(e.target.value)}
+          autoComplete="off"
+          onChange={(e)=>setEmail(e.target.value)}
         />
         <label>Password</label>
         <input 
           type="password" 
           className="registerInput" 
           placeholder="Enter your password..." 
-          onChange={e=>setPassword(e.target.value)}
+          autoComplete="off"
+          onChange={(e)=>setPassword(e.target.value)}
          />
-        <button className="registerButton" type="submit">Register</button>
+        <button 
+          className="registerButton" 
+          type="submit">
+            Register
+        </button>
       </form>
       <button className="registerLoginButton">
-        <Link className="link" to="/login">Login</Link>
+        <Link className="link" to="/login">
+          Login
+        </Link>
       </button>
-      {error && <span style={{color:"red", marginTop:"1rem"}}>Something went wrong</span>}
+        {error && <span style={{color:"red", marginTop:"1rem"}}>Something went wrong</span>}
     </div>
   )
 }

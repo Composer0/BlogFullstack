@@ -13,7 +13,7 @@ router.put("/:id", async (req, res) => {
             }    
             try{
                 const updateUser = await User.findByIdAndUpdate(req.params.id, {$set: req.body,
-                });
+                }, {new: true});
                 res.status(200).json(updateUser);
             } catch(err){
                 res.status(500).json
@@ -55,4 +55,4 @@ router.get("/:id", async (req, res) => {
     }
 })
 
-module.exports = router
+module.exports = router;
