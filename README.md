@@ -27,3 +27,15 @@
 
 ## Day 6
 - Created Admin model and route.
+
+## Day 7
+- Created code that allows Admin to use the Login Page.
+- Fixed login bug that caused the server to crash upon login.
+- Implemented Local Storage to hold signed in user information.
+- Implemented logout funtionality.
+- Established states and pathing needed from axios to create json tokens, upload images, and display images for posts.
+- Utilized Multer to allow users to  upload profile pictures.
+- Installed 'path' through npm to create a route to the images folder where images will be stored and used for posts on the homepage and single page.
+
+### Lesson Learned
+- Be more mindful of serverside code as that is where my errors were originating from throughout today. Problems can be avoided as long as you remember to spell check and determine what needs a function parenthesis and which functions within the client need the event to be stored as an argument for a function.
