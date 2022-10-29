@@ -5,6 +5,8 @@
 .singlePostWrapper {
     padding: 20px;
     padding-right: 0;
+    display: flex;
+    flex-direction: column;
 }
 
 .singlePostImg {
@@ -20,6 +22,18 @@
     font-family: 'Lora', serif;
     font-size: 28px;
     color: #b5c99a;
+}
+
+.singlePostTitleInput {
+    text-align: center;
+    margin: 10px;
+    font-family: 'Lora', serif;
+    font-size: 28px;
+    color: #e6f3d5;
+}
+
+.singlePostTitleInput:focus {
+    outline: none;
 }
 
 .singlePostEdit {
@@ -66,6 +80,13 @@
     font-weight: 600;
 }
 
+.singlePostDescriptionInput {
+    border: none;
+    font-size: 18px;
+    line-height: 25px;
+    height: 40vh;
+}
+
 .singlePostAuthor {
     cursor: pointer;
     text-decoration: none;
@@ -76,4 +97,21 @@
 
 .singlePostAuthor:hover {
     color: #b5c99a;
+}
+
+.singleUpdateButton {
+    border: none;
+    background-color: rgb(67, 231, 61);
+    padding: 5px;
+    cursor: pointer;
+    color: #000;
+    transition: 0.2s;
+    align-self: flex-end;
+    width: 30%;
+    border-radius: 7px;
+    margin-top: 1rem;
+}
+
+.singleUpdateButton:hover {
+    background-color: rgb(136, 255, 132);
 }

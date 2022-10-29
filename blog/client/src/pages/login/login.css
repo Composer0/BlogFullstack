@@ -5,8 +5,8 @@
     justify-content: center;
     align-items: center;
     background: linear-gradient(
-        rgba(163, 234, 255, 0.5), 
-        rgba(6, 70, 90, 0.5)), 
+        rgba(71, 105, 116, 0.5), 
+        rgba(2, 45, 58, 0.5)), 
         url("https://wallpaper.dog/large/20414995.jpg");
     background-size: cover;
 }
@@ -56,4 +56,15 @@
     padding: 10px;
     color: white;
     border-radius: 10px;
+}
+
+.adminLink {
+    margin-top: 1rem;
+    text-align: center;
+    text-decoration: none;
+    transition: .4s;
+}
+
+.adminLink:hover {
+    color:rgb(103, 226, 235);
 }

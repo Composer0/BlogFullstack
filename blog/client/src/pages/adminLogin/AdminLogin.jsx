@@ -1,6 +1,6 @@
 import {Link} from "react-router-dom";
 import {Context} from "../../context/Context";
-import './login.css'
+import './adminLogin.css'
 import {useContext, useRef} from "react";
 import axios from "axios"
 
@@ -15,7 +15,7 @@ const handleSubmit = async (e) => {
     type: "LOGIN_START"
   });
   try{
-    const res = await axios.post(("/auth/login"), {
+    const res = await axios.post(("/admin/login"), {
       username: userRef.current.value, 
       password: passwordRef.current.value
     })
@@ -28,7 +28,7 @@ const handleSubmit = async (e) => {
   // console.log(user);
   return (
     <div className="login">
-    <span className="loginTitle">Login</span>
+    <span className="loginTitle">Administrator Login</span>
       <form autoComplete="current-password" className="loginForm" 
       onSubmit={handleSubmit}
       >
@@ -45,8 +45,8 @@ const handleSubmit = async (e) => {
         <button className="loginButton" disabled={isFetching} type="submit">Login</button>
 
         <p className="adminLink">
-        <Link className="link" to="/adminLogin">
-          Administrator
+        <Link className="link" to="/login">
+          User Login
         </Link>
         </p>
       </form>

@@ -10,6 +10,7 @@
     align-items: center;
     color: #66bfbf;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    height: 100%;
 }
 
 .sidebarItem {
