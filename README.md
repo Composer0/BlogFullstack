@@ -1,5 +1,10 @@
 # Blog: Fullstack - Combining Frontend with Server API
 
+## To Start the App Upon Download
+- First check the json in API and Client directories to determine what needs to be installed through npm or yarn.
+- In a split terminal cd to api and cd to client.
+- Once in the api and client folders both will run on the command "npm start".
+
 ## Day 1
 - Created connection between frontend and api server to display all posts on the homepage.
 - Used this time to also create additional posts through postman to be displayed on the page across two users and four categories.
