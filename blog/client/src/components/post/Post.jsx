@@ -2,17 +2,17 @@ import "./post.css"
 import {Link} from "react-router-dom"
 
 export default function Post({post}) {
+  const publicFolder = "http://localhost:4274/images/"
   return (
     <div className="post">
     <Link className="post" to={`/post/${post._id}`}>
-    {post.photo && (
-      <img 
+    {post.photo && <img 
       className="postImg"
       // src="https://wallpapercave.com/wp/wp3720374.jpg"
-      src={post.photo}
+      src={publicFolder + post.photo}
       alt="post img"
       />
-    )}
+    }
     </Link>
       <div className="postInfo">
         <div className="postCategories">{

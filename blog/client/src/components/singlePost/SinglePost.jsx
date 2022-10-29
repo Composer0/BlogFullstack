@@ -8,6 +8,7 @@ export default function SinglePost() {
   const location = useLocation()
   const path = location.pathname.split("/")[2]
   const [post, setPost] = useState({})
+  const publicFolder = "http://localhost:4274/images/"
 
   useEffect(()=>{
     const getPost = async () => {
@@ -22,7 +23,7 @@ export default function SinglePost() {
       <div className="singlePostWrapper">
         {post.photo && 
         <img 
-        src={post.photo}
+        src={publicFolder + post.photo}
         alt=""
         className="singlePostImg"
         />

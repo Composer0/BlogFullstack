@@ -31,10 +31,10 @@ router.post("/login", async (req, res) => {
         !user && res.status(400).json("Wrong Combination of Username and Password. Please Try Again.")
         const validated = await bcrypt.compare(req.body.password, user.password)
         !validated && res.status(400).json("Wrong Combination of Username and Password. Please Try Again.")
-        const {password, ...others} = user._doc(); //._doc function added to avoid showing far more information than needed in our attempt to remove the password from the requested information. This method is deprecated.
+        const {password, ...others} = user._doc; //._doc function added to avoid showing far more information than needed in our attempt to remove the password from the requested information. This method is deprecated.
         res.status(200).json(others);
     } catch(err){
-        res.status(500).json(err);
+        res.status(500);
     }
 })
 

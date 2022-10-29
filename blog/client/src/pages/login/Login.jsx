@@ -7,7 +7,7 @@ import axios from "axios"
 export default function Login() {
   const userRef = useRef()
   const passwordRef = useRef()
-  const {user, dispatch, isFetching } = useContext(Context)
+  const {dispatch, isFetching } = useContext(Context)
   
 const handleSubmit = async (e) => {
   e.preventDefault();
@@ -15,7 +15,7 @@ const handleSubmit = async (e) => {
     type: "LOGIN_START"
   });
   try{
-    const res = await axios.post("/auth/login", {
+    const res = await axios.post("/admin/login" || "/auth/login", {
       username: userRef.current.value, 
       password: passwordRef.current.value
     })
@@ -25,16 +25,24 @@ const handleSubmit = async (e) => {
   }
 }
 
-  console.log(user);
+  // console.log(user);
   return (
     <div className="login">
     <span className="loginTitle">Login</span>
-      <form autoComplete="current-password" className="loginForm" onSubmit={handleSubmit}>
+      <form autoComplete="current-password" className="loginForm" 
+      onSubmit={handleSubmit}
+      >
         <label>Username</label>
-        <input type="text" className="loginInput" autoComplete="Username" placeholder="Enter your Username..." ref={userRef} />
+        <input type="text" className="loginInput" autoComplete="Username" placeholder="Enter your Username..." 
+        ref={userRef} 
+
+        />
         <label>Password</label>
-        <input type="password" className="loginInput" autoComplete="current-password" placeholder="Enter your password..." ref={passwordRef}/>
-        <button className="loginButton" type="submit">Login</button>
+        <input type="password" className="loginInput" autoComplete="current-password" placeholder="Enter your password..." 
+        ref={passwordRef}
+
+        />
+        <button className="loginButton" disabled={isFetching} type="submit">Login</button>
       </form>
       <button className="loginRegisterButton">
         <Link className="link" to="/register">Register</Link>

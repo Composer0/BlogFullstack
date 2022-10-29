@@ -1,8 +1,15 @@
 import {Link} from "react-router-dom";
 import "./navbar.css"
+import {useContext} from "react";
+import { Context} from "../../context/Context"
 
 export default function NavBar() {
-    const user = false;
+    const {user, dispatch} = useContext(Context);
+
+    const handleLogout =() => {
+        dispatch({type: "LOGOUT"})
+    }
+
   return (
     <div className="nav">
         <div className="navLeft">
@@ -33,7 +40,7 @@ export default function NavBar() {
                 <li className="navListItem">
                     <Link className="link" to="/write">WRITE</Link>
                 </li>
-                <li className="navListItem">
+                <li className="navListItem" onClick={(handleLogout)}>
                 {user && "LOGOUT"}
                 </li>
             </ul>
@@ -44,7 +51,7 @@ export default function NavBar() {
 
                     <Link to="/settings">
                     <img 
-                        className="navImg" src="https://www.orionpalmer.com/static/media/orionpalmer.ba51d754.webp" alt="user">
+                        className="navImg" src={user.profilePicture} alt="profilePicture">
                     </img>
                     </Link>
                 ) : (
@@ -57,7 +64,7 @@ export default function NavBar() {
 
             }
 
-            <i className="navSearchIcon fas fa-search"></i>
+            {/* <i className="navSearchIcon fas fa-search"></i> */}
         </div>
     </div>
   )

@@ -1,7 +1,10 @@
 import './settings.css'
 import Sidebar from "../../components/sidebar/Sidebar"
+import {useContext} from "react";
+import { Context} from "../../context/Context"
 
 export default function Settings() {
+    const {user} = useContext(Context);
   return (
     <div className="settings">
         <div className='settingswrapper'>
@@ -13,8 +16,8 @@ export default function Settings() {
                 <label>Profile Picture</label>
                 <div className="settingsProfilePicture">
                     <img 
-                    src="https://www.orionpalmer.com/static/media/orionpalmer.ba51d754.webp"
-                    alt=""
+                    src={user.profilePicture}
+                    alt="profilePicture"
                     />
                     <label className="settingsProfilePictureIcon" htmlFor="fileInput">
                     <i className="fa-regular fa-circle-user"></i>

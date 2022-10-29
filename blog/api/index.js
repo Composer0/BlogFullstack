@@ -8,9 +8,12 @@ const adminRoute = require("./routes/admin");
 const postsRoute = require("./routes/posts");
 const categoriesRoute = require("./routes/categories");
 const multer = require("multer");
+const path = require("path")
+
 
 dotenv.config();
 app.use(express.json()); //allows json objects to be sent.
+app.use("/images", express.static(path.join(__dirname, "/images")))
 
 mongoose.connect(process.env.MONGO_URL).then(console.log("Connected to Railway.app")).catch((err) => console.log(err));
 // Mongoose always treats creating a new index as true so it is no longer required in the code. If false then you will need to indicate it in the code. Otherwise you are absolutely fine.
@@ -20,7 +23,7 @@ const storage = multer.diskStorage({
     destination:(req, file, cb) => {
         cb(null,"images")
     }, filename:(req, file,cb) =>{
-        cb(null, "req.body.name")
+        cb(null, req.body.name)
     },
 }); //cb stands for callback function
 
