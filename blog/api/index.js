@@ -14,6 +14,13 @@ const path = require("path")
 dotenv.config();
 app.use(express.json()); //allows json objects to be sent.
 app.use("/images", express.static(path.join(__dirname, "/images")))
+// app.use(express.static(path.resolve(__dirname, "../client/build"))); //Node will serve files from the React app.
+// app.get("/api", (req,res) => {
+//     res.json({message: "I think we're in business"}); 
+// }) //Handle GET requests to /api route.
+// app.get('*', (req, res) => {
+//     res.sendFile(path.resolve(__dirname, '../client/build', 'index.html'));
+// }) // All other Get requests not handled before will return our React app.
 
 mongoose.connect(process.env.MONGO_URL).then(console.log("Connected to Railway.app")).catch((err) => console.log(err));
 // Mongoose always treats creating a new index as true so it is no longer required in the code. If false then you will need to indicate it in the code. Otherwise you are absolutely fine.

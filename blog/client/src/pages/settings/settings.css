@@ -23,6 +23,7 @@
     color: red;
     font-size: 12px;
     cursor: pointer;
+    transition: 0.4s;
 }
 
 .settingsDeleteTitle:hover {
@@ -58,6 +59,7 @@
     justify-content: center;
     margin-left: 10px;
     cursor: pointer;
+    transition: 0.4s;
 }
 
 .settingsProfilePictureIcon:hover {
@@ -84,12 +86,13 @@
     border: none;
     border-radius: 10px;
     color: white;
-    background-color: #66bfbf;
     padding: 10px;
     margin-top: 20px;
     cursor: pointer;
+    transition: 0.4s;
+    background-color: #427e7e;
 }
 
 .settingsSubmit:hover {
-    background-color: #427e7e;
+    background-color: #66bfbf;
 }
