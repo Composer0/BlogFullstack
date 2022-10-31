@@ -39,3 +39,7 @@
 
 ### Lesson Learned
 - Be more mindful of serverside code as that is where my errors were originating from throughout today. Problems can be avoided as long as you remember to spell check and determine what needs a function parenthesis and which functions within the client need the event to be stored as an argument for a function.
+
+## Day 8
+- Create Post & Delete Post funtionality incorporated for users. At this time it is only for the user that created the post.
+- Fixed Admin login. Learned that the code I had created previously locked 'users' from being able to login on the main login page and would only accept the route for 'admin'. Created a second login page that would follow the route specifically to admin. Doing this allows both types of users to login. In the future I will find a way for both types of user to login from the same page.
