@@ -43,3 +43,5 @@
 ## Day 8
 - Create Post & Delete Post funtionality incorporated for users. At this time it is only for the user that created the post.
 - Fixed Admin login. Learned that the code I had created previously locked 'users' from being able to login on the main login page and would only accept the route for 'admin'. Created a second login page that would follow the route specifically to admin. Doing this allows both types of users to login. In the future I will find a way for both types of user to login from the same page.
+
+## Day 9, 10, and 11
