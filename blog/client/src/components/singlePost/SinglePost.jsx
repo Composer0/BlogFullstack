@@ -10,7 +10,7 @@ export default function SinglePost() {
   const path = location.pathname.split("/")[2]
   const [post, setPost] = useState({})
   const publicFolder = "http://localhost:4274/images/"
-  const { user, admin } = useContext(Context);
+  const { user } = useContext(Context);
   const [title, setTitle] = useState("")
   const [description, setDescription] = useState("")
   const [updateMode, setUpdateMode] = useState(false)
@@ -18,7 +18,7 @@ export default function SinglePost() {
   
   useEffect(()=>{
     const getPost = async () => {
-      const res = await axios.get("/posts/" + path, {username:user.username});
+      const res = await axios.get("/posts/" + path);
       setPost(res.data)
       setTitle(res.data.title)
       setDescription(res.data.description)
