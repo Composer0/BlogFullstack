@@ -16,7 +16,7 @@ router.put("/:id", async (req, res) => {
                 }, {new: true});
                 res.status(200).json(updateUser);
             } catch(err){
-                res.status(500).json
+                res.status(500).json(err)
             }
     } else {
         res.status(401).json("You can update only your account.");
@@ -34,7 +34,7 @@ router.delete("/:id", async (req, res) => {
                 await User.findByIdAndDelete(req.params.id)
                 res.status(200).json("User has been deleted.");
             } catch(err){
-                res.status(500).json
+                res.status(500).json(err)
             }
         }catch (err) {
             res.status(404).json("User not found.");

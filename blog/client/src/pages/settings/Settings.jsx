@@ -11,10 +11,11 @@ export default function Settings() {
     const [password, setPassword] = useState("");
     const [success, setSuccess] = useState(false);
     const {user, dispatch} = useContext(Context);
-    const pictureFile = "https://localhost:4274/images/"
+    const pictureFile = "http://localhosts:4274/images/"
 
     const handleSubmit = async (e) => {
         e.preventDefault();
+        dispatch({ type: "UPDATE_START"}); //This was needed in order to stop the crashing from occuring...
         const updatedUser = {
           userId: user._id,
           username,
@@ -28,14 +29,14 @@ export default function Settings() {
           data.append("file", file);
           updatedUser.profilePicture = filename;
           try{
-            await axios.post("/upload", data);
-        }catch(err){
+              await axios.post("/upload", data);
+          }catch(err){
         }
-    }
-    try {
-        const res = await axios.put("/users/" +  user._id, updatedUser)
-        setSuccess(true)
-          dispatch({ type: "UPDATE_SUCCESS", payload: res.data})
+        }
+        try {
+          const res = await axios.put("/users/" +  user._id, updatedUser)
+          setSuccess(true)
+            dispatch({ type: "UPDATE_SUCCESS", payload: res.data})
         } catch (err) {
             dispatch({type:"UPDATE_FAILURE"})
         }
@@ -58,16 +59,22 @@ export default function Settings() {
                     <label className="settingsProfilePictureIcon" htmlFor="fileInput">
                     <i className="fa-regular fa-circle-user"></i>
                     </label>
-                    <input type="file" id="fileInput" style={{display: "none"}} onChange={(e) => setFile(e.target.files[0])}/>
+                    <input 
+                      type="file" 
+                      id="fileInput" 
+                      style={{display: "none"}} 
+                      onChange={(e) => setFile(e.target.files[0])}/>
                 </div>
                 <label>Username</label>
                 <input 
                   type="text" 
+                  autoComplete="on"
                   placeholder={user.username} 
                   onChange={(e) => setUsername(e.target.value)} />
                 <label>Email</label>
                 <input 
                   type="email" 
+                  autoComplete="on"
                   placeholder={user.email} 
                   onChange={(e) => setEmail(e.target.value)}/>
                 <label>Password</label>

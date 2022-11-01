@@ -5,6 +5,7 @@ import { Context} from "../../context/Context"
 
 export default function NavBar() {
     const {user, dispatch} = useContext(Context);
+    const pictureFolder = "http://localhost:4274/images/"
 
     const handleLogout =() => {
         dispatch({type: "LOGOUT"})
@@ -51,7 +52,7 @@ export default function NavBar() {
 
                     <Link to="/settings">
                     <img 
-                        className="navImg" src={user.profilePicture} alt="profilePicture">
+                        className="navImg" src={pictureFolder+user.profilePicture} alt="profilePicture">
                     </img>
                     </Link>
                 ) : (

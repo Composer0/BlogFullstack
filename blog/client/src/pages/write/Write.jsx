@@ -8,6 +8,7 @@ export default function Write() {
   
   const [title, setTitle] = useState("")
   const [description, setDescription] = useState("")
+  const [categories, setCategories] = useState("")
   const [file, setFile] = useState(null)
   const {user} = useContext(Context)
   
@@ -17,6 +18,7 @@ export default function Write() {
       username: user.username,
       title,
       description,
+      categories,
     };
     if(file){
       const data = new FormData();
@@ -46,9 +48,7 @@ export default function Write() {
     }
       <form className="writeForm" onSubmit={handleSubmit}>
         <div className="writeFormGroup">
-            <label htmlFor="fileInput" 
-            
-            >
+            <label htmlFor="fileInput">
             <i className="writeIcon fa-solid fa-plus"></i>
             {/* this section allows for the file to be selected from your folders. Pretty nifty. Looks good too. */}
             </label>
@@ -56,10 +56,21 @@ export default function Write() {
             <input type="text" placeholder="Title" className="writeInput" autoFocus={true} onChange={e=>setTitle(e.target.value)}/>
             {/* autoFocus ensures that upon page load that the cursor is already active within the input field. */}
         </div>
+        <div className="writeFormGroup2">
+        <div className="writeCategories">
+        <label className="categoryLabel">Category</label>
+        <select class="categoriesSelector" type="text" onChange={e=>setCategories(e.target.value)}>
+          <option value="Code">Code</option>
+          <option value="Music">Music</option>
+          <option value="Food">Food</option>
+          <option value="Life">Life</option>
+        </select>
+        </div>
+        <button className="writeSubmit" type="submit">Publish</button>
+        </div>
         <div className="writeFormGroup">
             <textarea placeholder="Share what you've learned..." type="text" className="writeText" onChange={e=>setDescription(e.target.value)}></textarea>
         </div>
-        <button className="writeSubmit" type="submit">Publish</button>
       </form>
     </div>
   )

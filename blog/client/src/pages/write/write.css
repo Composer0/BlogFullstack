@@ -7,9 +7,18 @@
 }
 
 .writeFormGroup {
-    margin-left: 150px;
+    margin: 0 100px;
     display: flex;
     align-items: center;
+    flex-direction: row;
+}
+
+.writeFormGroup2 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 150px;
 }
 
 input, textarea {
@@ -66,13 +75,10 @@ input:focus, textarea:focus {
 
 .writeText {
     font-size: 20px;
-    height: 100vh;
+    height: 60vh;
 }
 
 .writeSubmit {
-    position: absolute;
-    top: 20px;
-    right: 50px;
     color: #66bfbf;
     background-color: #061c29;
     box-shadow: 0 2px 5px rgb(0, 0, 0, .16);
@@ -95,4 +101,22 @@ input:focus, textarea:focus {
     height: 250px;
     border-radius: 10px;
     object-fit: cover;
+}
+
+.categoriesSelector {
+    border-radius: 10px;
+    padding: 10px;
+    color: #72e4cb;
+    background: #0a2f44;
+    border-color: #b5c99a;
+    text-align: center;
+    margin-top: 1rem;
+    margin-bottom: 3.2rem;
+    font-size: 1rem;
+}
+
+.writeCategories {
+    display: flex;
+    flex-direction: column;
+    margin-top: 1.2rem;
 }
