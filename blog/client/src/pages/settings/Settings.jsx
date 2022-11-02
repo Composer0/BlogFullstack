@@ -10,7 +10,7 @@ export default function Settings() {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const [success, setSuccess] = useState(false);
-    const {user, admin,  dispatch} = useContext(Context);
+    const {user,  dispatch} = useContext(Context);
     const pictureFile = "http://localhost:4274/images/"
 
     const handleSubmit = async (e) => {
@@ -73,7 +73,7 @@ export default function Settings() {
             <form className="settingsForm" onSubmit={handleSubmit}>
                 <label>Profile Picture</label>
                 <div className="settingsProfilePicture" >
-                    <img 
+                    <img className="settingsProfilePictureDisplay" 
                     src={file ? URL.createObjectURL(file) : pictureFile+user.profilePicture}
                     alt=""
                     />
@@ -104,6 +104,7 @@ export default function Settings() {
                   onChange={(e) => setPassword(e.target.value)}/>
                 <button className="settingsSubmit" type="submit">Update</button>
                 {success && <span style={{color: "green", textAlign: "center", marginTop:"20px"}}>Profile has been updated...</span>}
+                <button className="settingsSubmitDelete" type="submit" onClick={handleDelete}>Delete Account</button>
             </form>
         </div>
         <Sidebar />

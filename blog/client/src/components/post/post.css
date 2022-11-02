@@ -2,6 +2,9 @@
     width: 385px;
     margin: 0px 25px 40px 25px;
     box-shadow: rgba(140, 221, 208, 0.1) 0px 1px 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .postImg{
@@ -9,6 +12,7 @@
     height: 280px;
     object-fit: cover;
     border-radius: 7px;
+    align-items: center;
 }
 
 .postInfo {
@@ -28,6 +32,8 @@
     text-decoration: none;
     transition: 0.4s;
 }
+
+
 
 .postCategory:hover {
     color: #b5c99a;
@@ -55,6 +61,7 @@
     color: #93b6b6;
     margin: 7px 0 8px;
 }
+
 
 .createdBy {
     position: relative;
@@ -90,4 +97,19 @@ hr {
     -webkit-line-clamp: 4;
     -webkit-box-orient: vertical;
     /* These two webkits are how you make it trail off and not present the entire article. Just the snippet ;) */
+}
+
+@media screen and (max-width: 768px) {
+    .postCategory, .createdBy, .createdWhen {
+        font-size: 1rem;
+    }
+    .createdBy, .createdWhen {
+        padding: 1rem 0;
+    }
+    .postDescription {
+        font-size: 18px;
+    }
+    .postTitle {
+        font-size: 30px;
+    }
 }

@@ -85,3 +85,9 @@
 .sidebarIcon:hover {
     color: #b5c99a;
 }
+
+@media only screen and (max-width: 768px) {
+    .sidebar {
+        display: none
+    }
+}

@@ -115,3 +115,21 @@
 .singleUpdateButton:hover {
     background-color: rgb(136, 255, 132);
 }
+
+@media screen and (max-width: 768px) {
+    .singlePostTitle {
+        font-size: 3rem;
+    }
+    .singlePostDescription {
+        font-size: 24px;
+    }
+    .singlePostInfo {
+        font-size: 24px;
+    }
+    .singlePostInfo, .singlePostDescription {
+        margin: 2rem;
+    }
+    .singlePostWrapper {
+        padding: 0;
+    }
+}

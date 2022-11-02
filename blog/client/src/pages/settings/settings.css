@@ -45,7 +45,8 @@
 .settingsProfilePicture > img{
     width: 70px;
     height: 70px;
-    border-radius: 7px;
+    border-radius: 50%;
+
 }
 
 .settingsProfilePictureIcon {
@@ -93,6 +94,72 @@
     background-color: #427e7e;
 }
 
+.settingsSubmitDelete {
+    width: 150px;
+    align-self: center;
+    border: none;
+    border-radius: 10px;
+    color: black;
+    padding: 10px;
+    margin-top: 3rem;
+    cursor: pointer;
+    transition: 0.4s;
+    background-color: red;
+    font-size: 20px;
+    font-weight: bold;
+    display: none;
+}
+
 .settingsSubmit:hover {
     background-color: #66bfbf;
+}
+
+.settingsSubmitDelete:hover {
+    background-color: rgb(255, 94, 0);
+}
+
+@media screen and (max-width:768px) {
+    .settingswrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .settingsForm >input {
+        padding: 0 180px;
+        text-align: center;
+
+    }
+    .settingsForm {
+        align-items: center;
+        font-size: 2rem;
+    }
+    .settingsDeleteTitle {
+        display: none;
+    }
+    .settingsProfilePicture {
+        justify-content: space-between;
+
+    }
+    .settingsProfilePictureDisplay {
+        margin-right: 3rem;
+    }
+    .settingsProfilePictureIcon {
+        margin-left: 3rem;
+    }
+    input {
+        font-size: 20px;
+    }
+    label {
+        margin-bottom: 10px;
+    }
+    .settingsSubmit {
+        margin-top: 2rem;
+        font-size: 20px;
+    }
+
+    .settingsSubmitDelete {
+        display: inline-block;
+    }
+
 }
