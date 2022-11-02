@@ -45,3 +45,10 @@
 - Fixed Admin login. Learned that the code I had created previously locked 'users' from being able to login on the main login page and would only accept the route for 'admin'. Created a second login page that would follow the route specifically to admin. Doing this allows both types of users to login. In the future I will find a way for both types of user to login from the same page.
 
 ## Day 9, 10, and 11
+- Create upload file functionality for settings page.
+- Create update information functionality on settings page.
+- added role into user model.
+- corrected pathing issue on settings for displaying current profile picture.
+- Customized the About cards further to allow full text to show on card. Abandon original idea to ensure message comes across.
+- Added delete functionality to settings page where user will be deleted from database, logged out, and then sent back to the home page..
+- Removed all but 2 test users form database.
