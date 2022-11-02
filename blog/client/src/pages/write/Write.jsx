@@ -60,10 +60,11 @@ export default function Write() {
         <div className="writeCategories">
         <label className="categoryLabel">Category</label>
         <select class="categoriesSelector" type="text" onChange={e=>setCategories(e.target.value)}>
+          <option value="blank"></option>
+          <option value="Life">Life</option>
           <option value="Code">Code</option>
           <option value="Music">Music</option>
           <option value="Food">Food</option>
-          <option value="Life">Life</option>
         </select>
         </div>
         <button className="writeSubmit" type="submit">Publish</button>

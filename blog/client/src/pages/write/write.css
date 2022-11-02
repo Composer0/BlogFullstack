@@ -81,9 +81,10 @@ input:focus, textarea:focus {
 .writeSubmit {
     color: #66bfbf;
     background-color: #061c29;
-    box-shadow: 0 2px 5px rgb(0, 0, 0, .16);
+    /* box-shadow: 0 2px 5px rgb(0, 0, 0, .16); */
     padding: 10px;
-    border: none;
+    /* border: none; */
+    border-color: #b5c99a;
     border-radius: 10px;
     cursor: pointer;
     font-size: 16px;
@@ -93,6 +94,7 @@ input:focus, textarea:focus {
 .writeSubmit:hover {
     color: #72e4cb;
     background-color: #0a2f44;
+    color: #b5c99a;
 }
 
 .writeImg {

@@ -61,14 +61,15 @@ export default function SinglePost() {
         />
         }{
           updateMode ? (
-
+            
             <input 
               type="text" 
               value={title} 
               className="singlePostTitleInput" 
               autoFocus
               onChange={(e) => setTitle(e.target.value)}
-            />) : (
+            />
+            ) : (
 
           <h1 className="singlePostTitle">
             {post.title}

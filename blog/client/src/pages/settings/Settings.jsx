@@ -10,8 +10,8 @@ export default function Settings() {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const [success, setSuccess] = useState(false);
-    const {user, dispatch} = useContext(Context);
-    const pictureFile = "http://localhosts:4274/images/"
+    const {user, admin,  dispatch} = useContext(Context);
+    const pictureFile = "http://localhost:4274/images/"
 
     const handleSubmit = async (e) => {
         e.preventDefault();
@@ -22,6 +22,12 @@ export default function Settings() {
           email,
           password
         };
+        // const updateAdmin = {
+        //   adminId: admin._id,
+        //   username,
+        //   email,
+        //   password
+        // }
         if(file){
           const data = new FormData();
           const filename = Date.now() + file.name; //Date was chosen to help make each image unique upon submitting.
@@ -34,17 +40,21 @@ export default function Settings() {
         }
         }
         try {
-          const res = await axios.put("/users/" +  user._id, updatedUser)
+          let res = await axios.put("/users/" +  user._id, updatedUser)
           setSuccess(true)
             dispatch({ type: "UPDATE_SUCCESS", payload: res.data})
         } catch (err) {
-            dispatch({type:"UPDATE_FAILURE"})
+        //   let res = await axios.put("/admins/" + admin._id, updateAdmin)
+        //   setSuccess(true)
+        //     dispatch({ type: "UPDATE_SUCCESS", payload: res.data})
+        // } finally {
+          dispatch({type:"UPDATE_FAILURE"})
+
         }
       }
 
       const handleDelete = async() => {
         try {
-    
           await axios.delete(`/users/${user._id}`, {data: {userId:user._id}})
           dispatch({type: "LOGOUT"})
           window.location.replace("/")
@@ -65,7 +75,7 @@ export default function Settings() {
                 <div className="settingsProfilePicture" >
                     <img 
                     src={file ? URL.createObjectURL(file) : pictureFile+user.profilePicture}
-                    alt="profilePicture"
+                    alt=""
                     />
                     <label className="settingsProfilePictureIcon" htmlFor="fileInput">
                     <i className="fa-regular fa-circle-user"></i>

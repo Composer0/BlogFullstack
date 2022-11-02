@@ -17,7 +17,8 @@ router.post("/admin", async (req, res) => {
         const admin = await newAdmin.save(); //updates the database with the user.
         res.status(200).json(admin)
     } catch(err){
-        res.status(500).json // this error indicates that there is something wrong with the server. Being official ra
+        res.status(500).json
+         // this error indicates that there is something wrong with the server. Being official ra
     }
 })
 // async is used because we don't know how long it will take for the user to become registered within the database.

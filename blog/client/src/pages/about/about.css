@@ -1,5 +1,7 @@
 .title {
-    margin-bottom: 1rem;
+    font-size: 2rem;
+    margin-top: 1rem;
+    font-family: "Lora", serif;
 }
 
 .about {
@@ -30,15 +32,14 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    width: 247px;
-    height: 450px;
+    /* justify-content: center; */
+    width: 500px;
+    height: 562px;
     padding: 1rem;
     text-align: center;
     background-color: #061c29;
     border-radius: .8rem;
     color: #66bfbf;
-    cursor: pointer;
     overflow: hidden;
     z-index: 1;
     transition: 0.4s;
@@ -52,8 +53,8 @@
     display: grid;
     place-items: center;
     position: relative;
-    width: 255px;
-    height: 458px;
+    width: 508px;
+    height: 570px;
     border-radius: 1rem;
     background: linear-gradient(50deg, rgb(0, 112, 84), rgb(5, 69, 99));
     overflow: hidden;
@@ -62,15 +63,15 @@
 
 
 .musician {
-    background-image: linear-gradient(#708896, #a0b3be ), url(https://images.unsplash.com/photo-1600771488491-c22d42a9347d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80);
+    background-image: radial-gradient(#708896, #4c555a ), url(https://images.unsplash.com/photo-1600771488491-c22d42a9347d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80);
 }
 
 .programmer {
-    background-image: linear-gradient(#708896, #a0b3be ), url(https://images.unsplash.com/photo-1587620962725-abab7fe55159?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1031&q=80);
+    background-image: linear-gradient(#708896, #4c555a ), url(https://images.unsplash.com/photo-1587620962725-abab7fe55159?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1031&q=80);
 }
 
 .life {
-    background-image: linear-gradient(#708896, #a0b3be ), url(https://petpress.net/wp-content/uploads/2020/01/81536682_192447375276262_2128183788650034141_n1.jpg);
+    background-image: linear-gradient(#708896, #33383b ), url(https://petpress.net/wp-content/uploads/2020/01/81536682_192447375276262_2128183788650034141_n1.jpg);
 }
 
 .musician, .programmer, .life {
@@ -83,11 +84,30 @@
     font-size: 18px;
     line-height: 28px;
     margin-bottom: 2rem;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    display: -webkit-box;
+    /* overflow: hidden; */
+    /* text-overflow: ellipsis; */
+    /* display: -webkit-box;
     -webkit-line-clamp: 4;
-    -webkit-box-orient: vertical;
+    -webkit-box-orient: vertical; */
+    opacity: 0;
+    transition: 1s;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transform: translateY(10px);
+}
+
+.informationText:hover {
+    opacity: 1;
+    transform: translateY(0px);
+
+}
+
+.information {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .moreInfo {
@@ -98,12 +118,14 @@
     text-decoration: none;
     transition: 0.4s;
     border: 4px solid rgb(0, 112, 84);
+    opacity: 0;
 }
 
 .moreInfo:hover {
     background-color: #061c29;
     color: #b5c99a;
     border: 4px solid rgb(101, 207, 181);
+    opacity: 1;
 }
 
 .container::before{
@@ -125,6 +147,10 @@
 
 @keyframes cardEffect {
     100% {
-        transform: rotate(-45deg) translate(0, 675px);
+        transform: rotate(-45deg) translate(0, 750px);
     }
+}
+
+.aboutHeaderSecondary {
+    font-family: "Lora", serif;
 }
