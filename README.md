@@ -52,3 +52,6 @@
 - Customized the About cards further to allow full text to show on card. Abandon original idea to ensure message comes across.
 - Added delete functionality to settings page where user will be deleted from database, logged out, and then sent back to the home page..
 - Removed all but 2 test users form database.
+
+## Day 12
+- Screen Width 768px breakpoint established on About, Settings, Header, Posts, and Single post pages.
