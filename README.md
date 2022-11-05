@@ -2,8 +2,10 @@
 
 ## To Start the App Upon Download
 - First check the json in API and Client directories to determine what needs to be installed through npm or yarn.
-- In a split terminal cd to api and cd to client.
-- Once in the api and client folders both will run on the command "npm start".
+- For the API you will need to install the following npms: dompurify, dotenv, express, jsdom, marked, mongoose, multer, nodemon, path, and bcrypt.
+- For the CLIENT, after you create the react app through npx create-react-app, you will need to install the following npms: react-dom, react-icons, react-router-dom, react-scroll and styled-components.
+- In a split terminal have one cd to api and the other cd to client.
+- Once in the api and client folders run on the command "npm start" to initialize the blog.
 
 ## Day 1
 - Created connection between frontend and api server to display all posts on the homepage.
@@ -55,3 +57,6 @@
 
 ## Day 12
 - Screen Width 768px breakpoint established on About, Settings, Header, Posts, and Single post pages.
+
+## Day 13
+- Experiented with Markdown workaround to allow the blog content to display different headers, bullets, and etcetera. The code currently inserted at the moment has made the blog content dissappear. At this time the code is still in place and will be revised further. To allow the original code to run as originally intended simply comment out or remove the following lines in api/models/Post.js: 2-5, 31-34, and 39-43. Additiionally you will need to uncomment line 104 in client/src/components/singlePost/SinglePost.jsx and then comment out line 105.
