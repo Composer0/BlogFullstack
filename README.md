@@ -8,7 +8,7 @@
 - Once in the api and client folders run on the command "npm start" to initialize the blog.
 
 ### Note on current version
--At this time the code is still in place and will be revised further. To allow the original code to run as originally intended simply comment out or remove the following lines in api/models/Post.js: 2-5, 31-34, and 39-43. Additiionally you will need to uncomment line 104 in client/src/components/singlePost/SinglePost.jsx and then comment out line 105.
+- At this time the code is still in place and will be revised further. To allow the original code to run as originally intended simply comment out or remove the following lines in api/models/Post.js: 2-5, 31-34, and 39-43. Additiionally you will need to uncomment line 104 in client/src/components/singlePost/SinglePost.jsx and then comment out line 105.
 
 ## Day 1
 - Created connection between frontend and api server to display all posts on the homepage.
