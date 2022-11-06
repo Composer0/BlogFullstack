@@ -7,6 +7,9 @@
 - In a split terminal have one cd to api and the other cd to client.
 - Once in the api and client folders run on the command "npm start" to initialize the blog.
 
+### Note on current version
+-At this time the code is still in place and will be revised further. To allow the original code to run as originally intended simply comment out or remove the following lines in api/models/Post.js: 2-5, 31-34, and 39-43. Additiionally you will need to uncomment line 104 in client/src/components/singlePost/SinglePost.jsx and then comment out line 105.
+
 ## Day 1
 - Created connection between frontend and api server to display all posts on the homepage.
 - Used this time to also create additional posts through postman to be displayed on the page across two users and four categories.
@@ -60,3 +63,5 @@
 
 ## Day 13
 - Experiented with Markdown workaround to allow the blog content to display different headers, bullets, and etcetera. The code currently inserted at the moment has made the blog content dissappear. At this time the code is still in place and will be revised further. To allow the original code to run as originally intended simply comment out or remove the following lines in api/models/Post.js: 2-5, 31-34, and 39-43. Additiionally you will need to uncomment line 104 in client/src/components/singlePost/SinglePost.jsx and then comment out line 105.
+
+## Day 14
