@@ -23,6 +23,7 @@
 
 .loginForm>label {
     margin: 10px 0;
+    font-size: 1rem;
 }
 
 .loginInput {
@@ -34,17 +35,24 @@
 .loginButton {
     margin-top: 20px;
     cursor:pointer;
-    background-color: lightcoral;
+    background-color: #93b6b6;
     border: none;
     color: white;
     border-radius: 10px;
     padding: 10px;
+    transition: 0.4s;
 }
 
 .loginButton:disabled{
     cursor: not-allowed;
-    background-color: blue;
+    background-color: rgb(137, 235, 194);
 }
+
+.loginButton:hover {
+    background: #b5c99a;
+    box-shadow: rgba(255, 255, 255, 0.5);
+}
+
 
 .loginRegisterButton {
     position: absolute;
@@ -67,4 +75,16 @@
 
 .adminLink:hover {
     color:rgb(103, 226, 235);
+}
+
+@media screen and (max-width: 768px) {
+    .loginRegisterButton {
+        display: none;
+    }
+
+    .loginButton {
+        margin-top: 3rem;
+        padding: .8rem 0;
+        font-size: 1.2rem;
+    }
 }

@@ -1,5 +1,4 @@
-const express = require('express')
-const router = express.Router(); // line 1 and 2 can be combined, but our goal is to provide clarity. alternate code could be... const router = require('express).Router();
+const router = require('express').Router();
 const User = require("../models/User");
 const bcrypt = require("bcrypt");
 
@@ -29,8 +28,10 @@ router.post("/login", async (req, res) => {
     try{
         const user = await User.findOne({username: req.body.username})
         !user && res.status(400).json("Wrong Combination of Username and Password. Please Try Again.")
-        const validated = await bcrypt.compare(req.body.password, user.password)
-        !validated && res.status(400).json("Wrong Combination of Username and Password. Please Try Again.")
+
+        const validate = await bcrypt.compare(req.body.password, user.password)
+        !validate && res.status(400).json("Wrong Combination of Username and Password. Please Try Again.")
+
         const {password, ...others} = user._doc; //._doc function added to avoid showing far more information than needed in our attempt to remove the password from the requested information. This method is deprecated.
         res.status(200).json(others);
     } catch(err){

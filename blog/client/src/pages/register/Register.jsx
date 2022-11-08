@@ -7,7 +7,7 @@ export default function Register() {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [email, setEmail] = useState("");
-  const [error, setError] = useState("");
+  const [error, setError] = useState(false);
 
   const handleSubmit = async (e)=>{
     e.preventDefault();
@@ -15,15 +15,13 @@ export default function Register() {
     // if (const res = await axios.get("/api/register", {username})
     // }
     try{
-      const res = await axios.post("/auth/register", {
+      const res = await axios.post("https://orionblogserver.up.railway.app/api/auth/register", {
         username, 
         email, 
         password,
       });
       res.data && window.location.replace("/login");
-      console.log("new user!");
     } catch (err) {
-      console.log("duplicate user");
       setError(true);
     }
   }
@@ -38,7 +36,7 @@ export default function Register() {
           className="registerInput" 
           placeholder="Enter your username..." 
           autoComplete="off"
-          onChange={(e)=>setUsername(e.target.value)}
+          onChange={(e) => setUsername(e.target.value)}
         />
         <label>Email</label>
         <input 
@@ -46,7 +44,7 @@ export default function Register() {
           className="registerInput" 
           placeholder="Enter your email..." 
           autoComplete="off"
-          onChange={(e)=>setEmail(e.target.value)}
+          onChange={(e) => setEmail(e.target.value)}
         />
         <label>Password</label>
         <input 
@@ -54,7 +52,7 @@ export default function Register() {
           className="registerInput" 
           placeholder="Enter your password..." 
           autoComplete="off"
-          onChange={(e)=>setPassword(e.target.value)}
+          onChange={(e) => setPassword(e.target.value)}
          />
         <button 
           className="registerButton" 

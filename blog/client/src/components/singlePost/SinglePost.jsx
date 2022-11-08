@@ -9,7 +9,7 @@ export default function SinglePost() {
   const location = useLocation()
   const path = location.pathname.split("/")[2]
   const [post, setPost] = useState({})
-  const publicFolder = "http://localhost:4274/images/"
+  const publicFolder = "https://orionblogserver.up.railway.app/images/"
   const { user } = useContext(Context);
   const [title, setTitle] = useState("")
   const [description, setDescription] = useState("")
@@ -18,7 +18,7 @@ export default function SinglePost() {
   
   useEffect(()=>{
     const getPost = async () => {
-      const res = await axios.get("/posts/" + path);
+      const res = await axios.get("https://orionblogserver.up.railway.app/api/posts/" + path);
       setPost(res.data)
       setTitle(res.data.title)
       setDescription(res.data.description)
@@ -31,7 +31,7 @@ export default function SinglePost() {
   const handleDelete = async() => {
     try {
 
-      await axios.delete(`/posts/${post._id}`, {data: {username:user.username}})
+      await axios.delete(`https://orionblogserver.up.railway.app/api/posts/${post._id}`, {data: {username:user.username}})
       window.location.replace("/")
     } catch(err) {
 
@@ -40,7 +40,7 @@ export default function SinglePost() {
 
   const handleUpdate = async () => {
     try {
-      await axios.put(`/posts/${post._id}`, {
+      await axios.put(`https://orionblogserver.up.railway.app/api/posts/${post._id}`, {
         username:user.username,
         title,
         description
@@ -102,6 +102,7 @@ export default function SinglePost() {
           
           <p className="singlePostDescription">
           {post.description}
+          {/* {post.sanitizedHtml} */}
           </p>
         )}
         {updateMode && (

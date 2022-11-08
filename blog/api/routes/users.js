@@ -12,12 +12,16 @@ router.put("/:id", async (req, res) => {
                 req.body.password = await bcrypt.hash(req.body.password, salt);
             }    
             try{
-                const updateUser = await User.findByIdAndUpdate(req.params.id, {$set: req.body,
-                }, {new: true});
+                const updateUser = await User.findByIdAndUpdate(
+                    req.params.id, {
+                        $set: req.body,
+                    }, 
+                    {new: true}
+                );
                 res.status(200).json(updateUser);
             } catch(err){
                 res.status(500).json(err)
-            }
+        }
     } else {
         res.status(401).json("You can update only your account.");
     }
@@ -48,7 +52,7 @@ router.delete("/:id", async (req, res) => {
 router.get("/:id", async (req, res) => {
     try{
         const user = await User.findById(req.params.id);
-        const {password, ...others} = user._doc
+        const {password, ...others} = user._doc;
         res.status(200).json(others)
     } catch(err){
         res.status(500).json(err)

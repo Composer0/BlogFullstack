@@ -2,29 +2,51 @@ import {Link} from "react-router-dom";
 import "./navbar.css"
 import {useContext} from "react";
 import { Context} from "../../context/Context"
+import {FaBars} from "react-icons/fa"
 
-export default function NavBar() {
+export default function NavBar({toggle}) {
     const {user, dispatch} = useContext(Context);
-    const pictureFolder = "http://localhost:4274/images/"
+    const pictureFolder = "https://orionblogserver.up.railway.app/images/"
 
     const handleLogout =() => {
         dispatch({type: "LOGOUT"})
     }
 
+
+
   return (
     <div className="nav">
+        {
+                user ? (
+
+                    <Link to="/settings">
+                    <img 
+                        className="navImgMobile" src={pictureFolder+user.profilePicture} alt="profilePicture">
+                    </img>
+                    </Link>
+                ) : (
+                    <ul className="navSigninMobile">
+                        <Link className="navListItemMobile link" to="/login">LOGIN</Link>
+                        <Link className="navListItemMobile link" to="/register">REGISTER</Link>
+                    </ul>
+                )
+
+            }
+            
+           <FaBars className="fabars" onClick={toggle}></FaBars>
+            
         <div className="navLeft">
             <a href="https://www.linkedin.com/in/orion-palmer/" target="_blank" rel="noreferrer">
-                <i className="navIcon fab fa-linkedin"></i>
+                <i className="navIcon navIconMobile fab fa-linkedin"></i>
             </a>
             <a href="https://www.youtube.com/channel/UC1PLqeZnOUcLVteRSYwk1WQ/featured" target="_blank" rel="noreferrer">
-                <i className="navIcon fa-brands fa-youtube"/>
+                <i className="navIcon navIconMobile fa-brands fa-youtube"/>
             </a>
             <a href="https://orionpalmer.hashnode.dev/" target="_blank" rel="noreferrer">
-                <i className="navIcon fa-brands fa-hashnode"/>
+                <i className="navIcon navIconMobile fa-brands fa-hashnode"/>
             </a>
             <a href="https://github.com/Composer0" target="_blank" rel="noreferrer">
-                <i className="navIcon fab fa-github"/>
+                <i className="navIcon navIconMobile fab fa-github"/>
             </a>
         </div>
         <div className="navCenter">

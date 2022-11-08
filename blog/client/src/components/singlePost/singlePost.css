@@ -1,5 +1,6 @@
 .singlePost {
     flex: 9;
+    overflow-x: hidden;
 }
 
 .singlePostWrapper {
@@ -71,7 +72,7 @@
 
 .singlePostDescription {
     font-size: 18px;
-    line-height: 25px;
+    line-height: 2rem;
 }
 
 .singlePostDescription::first-letter {
@@ -117,19 +118,52 @@
 }
 
 @media screen and (max-width: 768px) {
+    .singlePost {
+        align-items: center;
+    }
+    .singlePostWrapper {
+        margin: 0;
+        width: 100%;
+        padding: 0;
+    }
+    .singlePostImg {
+        width: 100%;
+        overflow-x: hidden;
+    }
     .singlePostTitle {
-        font-size: 3rem;
+        font-size: 2rem;
+        width: 100%;
+        text-align: left;
+
     }
     .singlePostDescription {
         font-size: 24px;
+        
     }
     .singlePostInfo {
         font-size: 24px;
+        flex-direction: column;
     }
     .singlePostInfo, .singlePostDescription {
-        margin: 2rem;
+        margin: 1rem;
+        overflow-x: hidden;
+        width: 390px;
+        height: auto;
     }
-    .singlePostWrapper {
-        padding: 0;
+    .singlePostDescriptionInput {
+        margin: 0rem;
     }
+    .singleUpdateButton {
+        margin-right: 2rem;
+    }
+    .singlePostIcon {
+        display: none;
+    }
+    .singlePostTitleInput {
+        margin: 0;
+    }
+}
+
+@media screen and (max-width: 520px) {
+    
 }

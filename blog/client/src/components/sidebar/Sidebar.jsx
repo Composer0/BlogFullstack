@@ -8,7 +8,7 @@ export default function Sidebar() {
 
   useEffect(()=> {
     const getCategories = async () => {
-      const res = await axios.get("/categories")
+      const res = await axios.get("https://orionblogserver.up.railway.app/api/categories")
       setCategories(res.data)
     }
     getCategories();

@@ -41,5 +41,5 @@
       "last 1 safari version"
     ]
   },
-  "proxy": "http://localhost:4274/api/"
+  "proxy": "https://orionblogserver.up.railway.app/api/"
 }

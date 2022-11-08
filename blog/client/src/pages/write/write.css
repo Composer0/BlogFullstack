@@ -65,10 +65,6 @@ input:focus, textarea:focus {
     width: 70vw;
 }
 
-.writeText {
-    width: 72vw;
-}
-
 .writeInput:focused {
     outline: none;
 }
@@ -76,6 +72,7 @@ input:focus, textarea:focus {
 .writeText {
     font-size: 20px;
     height: 60vh;
+    width: 72vw;
 }
 
 .writeSubmit {
@@ -121,4 +118,38 @@ input:focus, textarea:focus {
     display: flex;
     flex-direction: column;
     margin-top: 1.2rem;
+}
+
+@media screen and (max-width:768px) {
+    .writeFormGroup {
+        margin: 1rem;
+    }
+    .writeText {
+        width: 100%;
+        margin: 1rem;
+    }
+    .writeIcon {
+        margin: 0 1rem;
+    }
+    .writeInput {
+        width: 100%;
+        margin-right: 1rem;
+    }
+    .categoriesSelector {
+        flex: 6;
+        justify-content: flex-start;
+        align-items: left;
+    }
+    .writeSubmit {
+        flex: 6;
+        margin-top: 10px;
+        margin-left: 3rem;
+    }
+    .writeFormGroup2 {
+        margin: 0 2rem;
+    }
+    .writeImg {
+        margin: 0;
+        width: 100%;
+    }
 }

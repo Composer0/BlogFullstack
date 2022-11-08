@@ -2,7 +2,7 @@ import "./post.css"
 import {Link} from "react-router-dom"
 
 export default function Post({post}) {
-  const publicFolder = "http://localhost:4274/images/"
+  const publicFolder = "https://orionblogserver.up.railway.app/images/"
   return (
     <div className="post">
     <Link className="post" to={`/post/${post._id}`}>

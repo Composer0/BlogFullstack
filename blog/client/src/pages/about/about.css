@@ -40,7 +40,7 @@
     background-color: #061c29;
     border-radius: .8rem;
     color: #66bfbf;
-    overflow: hidden;
+    /* overflow: hidden; */
     z-index: 1;
     transition: 0.4s;
 }
@@ -153,4 +153,24 @@
 
 .aboutHeaderSecondary {
     font-family: "Lora", serif;
+}
+
+@media screen and (max-width: 768px) {
+    .container {
+        margin: 2rem;
+        overflow: hidden;
+        height: 100%;
+    }
+    .informationText {
+        opacity: 1;
+        transform: translateY(-10px);
+        color: #b5c99a;
+    }
+    .informationText:hover {
+        transform: translateY(-10px);
+    }
+    .card {
+        width: 100%;
+        height: 100%;
+    }
 }

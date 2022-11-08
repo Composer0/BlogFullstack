@@ -4,8 +4,9 @@ export default function Header() {
   return (
     <div className="header">
         <div className="headerTitles">
-            <span className="headerTitleLg">Orion's Blog</span>
-            <span className="headerTitleSm">Developed with React & Node</span>
+            <span className="headerTitleLg">Creators' Blog</span>
+            <span className="headerTitleSmInfo">A Blog for Creators of Various Backgrounds</span>
+            <span className="headerTitleSmDeveloped">Developed with React & Node</span>
         </div>
         <img className="headerImg" 
         // src='https://images.pexels.com/photos/261579/pexels-photo-261579.jpeg' 

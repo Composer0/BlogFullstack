@@ -15,7 +15,7 @@ export default function Home() {
 
   useEffect(() =>{
     const fetchPosts = async () => {
-      const res = await axios.get("/posts" + search)
+      const res = await axios.get("https://orionblogserver.up.railway.app/api/posts" + search)
       // console.log(res);
       setPosts(res.data)
     }
