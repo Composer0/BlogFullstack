@@ -1,5 +1,11 @@
 # Blog: Fullstack - Combining Frontend with Server API
 
+Deployed on the following site!
+https://creators-blog.netlify.app/
+
+#Problem to Solve
+Crashing server on incorrect login!!!
+
 ## To Start the App Upon Download
 - First check the json in API and Client directories to determine what needs to be installed through npm or yarn.
 - For the API you will need to install the following npms: dompurify, dotenv, express, jsdom, marked, mongoose, multer, nodemon, path, and bcrypt.
