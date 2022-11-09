@@ -3,8 +3,11 @@
 Deployed on the following site!
 https://creators-blog.netlify.app/
 
-# Problem to Solve
-Crashing server on incorrect login!!!
+# Problems to Solve
+- Crashing server on incorrect login!!!
+- Server hangs when creating a duplicate user instead of generating the error.
+- Updating user without an email or password will reset the email and password to blank.
+
 
 ## To Start the App Upon Download
 - First check the json in API and Client directories to determine what needs to be installed through npm or yarn.
