@@ -108,6 +108,10 @@ export default function SinglePost() {
         {updateMode && (
         <button className="singleUpdateButton" onClick={handleUpdate}>Update</button>
         )}
+        <div className="singlePostEditMobile">
+              <i className="singlePostIcon fa-regular fa-pen-to-square" onClick = {() => setUpdateMode(true)}></i>
+              <i className="singlePostIcon fa-solid fa-trash" onClick={handleDelete}></i>
+              </div>
       </div>
     </div>
   )

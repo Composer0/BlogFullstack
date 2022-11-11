@@ -107,20 +107,31 @@ hr {
 }
 
 @media screen and (max-width: 768px) {
+    .post {
+        width: 100%;
+        margin: 1rem auto;
+    }
+
+    
     .postCategory, .createdBy, .createdWhen {
         font-size: 1rem;
     }
     .createdBy, .createdWhen {
         padding: 1rem 0;
     }
+    .createdBy {
+        right: 4rem;
+    }
+    .createdWhen {
+        left: 4rem;
+    }
     .postDescription {
         font-size: 18px;
+        width: 95%;
+        text-align: center;
     }
     .postTitle {
-        font-size: 28px;
+        font-size: 30px;
     }
-    .post {
-       width: 90%; 
-       margin: 0px 0px 40px;
-    }
+    
 }

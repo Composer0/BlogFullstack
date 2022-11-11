@@ -30,6 +30,7 @@
     padding: 10px;
     background-color: white;
     border: none;
+    color: #000;
 }
 
 .loginButton {
@@ -83,8 +84,11 @@
     }
 
     .loginButton {
-        margin-top: 3rem;
+        margin: 3rem 0rem;
         padding: .8rem 0;
         font-size: 1.2rem;
+    }
+    .loginInput {
+        width: 92%;
     }
 }

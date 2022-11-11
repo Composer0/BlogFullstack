@@ -19,6 +19,7 @@
     font-size: 20px;
     text-align: center;
     z-index: 1;
+    transition: 0.4s;
 }
 
 .headerTitleSmDeveloped {
@@ -27,6 +28,7 @@
     font-size: 16px;
     text-align: center;
     z-index: 1;
+    transition: 0.4s;
 }
 
 .headerTitleLg {
@@ -35,6 +37,7 @@
     font-size: 100px;
     text-align: center;
     z-index: 1;
+    transition: 0.4s;
 }
 
 .headerImg {
@@ -74,6 +77,9 @@
     }
     .headerTitleSmDeveloped {
         top: 45%;
+    }
+    .headerTitleLg {
+        top: 12%; 
     }
 }
 

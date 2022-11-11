@@ -7,7 +7,7 @@ import Login from './pages/login/Login'
 import Register from './pages/register/Register'
 import About from './pages/about/About'
 import Contact from './pages/contact/Contact'
-import PasswordGenerator from './pages/passwordGenerator/PasswordGenerator'
+// import PasswordGenerator from './pages/passwordGenerator/PasswordGenerator'
 // import AdminLogin from './pages/adminLogin/AdminLogin'
 import {
     BrowserRouter as Router,
@@ -44,7 +44,7 @@ function App() {
                 <Route path="/settings" element={user ? <Settings /> : <Register />} />
                 <Route path="/login" element={user ? <Home /> : <Login />} />
                 <Route path="/register" element={user ? <Home/> : <Register />} />
-                <Route path="/passwordGenerator" element={<PasswordGenerator/>} />
+                {/* <Route path="/passwordGenerator" element={<PasswordGenerator/>} /> */}
                 {/* <Route path="/adminLogin" element={user ? <Home /> : <AdminLogin />} /> */}
             </Routes>
         </Router>

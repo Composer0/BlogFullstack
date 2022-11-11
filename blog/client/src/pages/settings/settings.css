@@ -176,4 +176,12 @@
         display: inline-block;
     }
 
+    .settingsUpdateTitle {
+        margin-top: 1.5rem;
+    }
+
+    .settingsUsername {
+        border-bottom: 1px solid #93dfdf;
+    }
+
 }

@@ -159,7 +159,7 @@
     }
     .nav {
         width: 100%;
-            transition: 0.8s all ease;
+        transition: 0.8s all ease;
     }
 
     .navImgMobile {
@@ -197,6 +197,7 @@
         font-weight: 300;
         cursor: pointer;
         transition: 0.4s;
+        z-index: 1;
     }
     
     .navListItemMobile:hover {

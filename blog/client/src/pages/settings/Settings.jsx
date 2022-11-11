@@ -63,6 +63,8 @@ export default function Settings() {
         }
       }
 
+      console.log(user)
+
   return (
     <div className="settingsPage">
         <div className='settingswrapper'>
@@ -87,7 +89,7 @@ export default function Settings() {
                       onChange={(e) => setFile(e.target.files[0])}/>
                 </div>
                 <label>Username</label>
-                <label>{user.username}</label>
+                <label className="settingsUsername">{user.username}</label>
                 <label>Email</label>
                 <input 
                   type="email" 
