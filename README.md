@@ -75,4 +75,9 @@ https://creators-blog.netlify.app/
 - Adjusted the About, Login, and Register pages for mobile use.
 - Modified the Navbar for mobile use with the inclusion of the Icon portrait to take user to settings instead of menu and as well as the Login and Register Links for new users.
 
-This version is ready for deployment.
+## Day 15-17
+- Ran into a deploy problem when updating css and adding functionality to settings page which cause netlify to long support the site.
+- Trouble shooted those areas by adding _redirects to the public folder and rebuilding the app step by step after adding the netlify cli that allowed me to update the blog upon running.
+- Made sure that all aspects of the site were mobile friendly and fixed areas that had runoff were not displaying as intended.
+- Now the site is being eployed without display issues.
+- Current issues to address are present.
