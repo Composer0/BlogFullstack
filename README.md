@@ -3,6 +3,9 @@
 Deployed on the following site!
 https://creators-blog.netlify.app/
 
+Video Demo: 
+https://www.youtube.com/watch?v=RB1Lh7rKlfg
+
 # Problems to Solve
 - Crashing server on incorrect login!!!
 - Server hangs when creating a duplicate user instead of generating the error.
