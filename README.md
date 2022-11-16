@@ -84,3 +84,6 @@ https://www.youtube.com/watch?v=RB1Lh7rKlfg
 - Made sure that all aspects of the site were mobile friendly and fixed areas that had runoff were not displaying as intended.
 - Now the site is being eployed without display issues.
 - Current issues to address are present.
+
+## Day 18
+- Modified auth login route to prevent crashing the server.
