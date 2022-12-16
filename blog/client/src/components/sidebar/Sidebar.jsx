@@ -3,12 +3,14 @@ import {useState, useEffect} from 'react'
 import axios from 'axios'
 import {Link} from 'react-router-dom';
 
+let ProfilePhoto = require('./img/orionpalmer.webp')
+
 export default function Sidebar() {
   const [categories, setCategories] = useState([]);
 
   useEffect(()=> {
     const getCategories = async () => {
-      const res = await axios.get("/categories")
+      const res = await axios.get("https://orionblogserver.up.railway.app/apiy/categories")
       setCategories(res.data)
     }
     getCategories();
@@ -17,7 +19,7 @@ export default function Sidebar() {
     <div className="sidebar">
       <div className="sidebarItem">
         <span className="sidebarTitle">ABOUT ME</span>
-        <img className="sidebarImg" src="https://www.orionpalmer.com/static/media/orionpalmer.ba51d754.webp" alt=""></img>
+        <img className="sidebarImg" src={ProfilePhoto} alt="profilePhoto" />
         <p>
           HI! I'm Orion Palmer, a Fullstack Developer, Music Educator, Husband, Cook, and an all round chill guy. Feel free to email or message me if you have questions or just want to chat.
         </p>
